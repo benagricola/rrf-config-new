@@ -1,16 +1,16 @@
 ; drives.g - Configures motor driver settings
 
 ; Physical drive 0 (X) goes forwards using default driver timings
-M569 P0 S{global.miloDriveDir[0]}
+M569 P0 S1
 
 ; Physical drive 1 (Y) goes forwards using default driver timings
-M569 P1 S{global.miloDriveDir[1]}
+M569 P1 S1
 
 ; Physical drive 2 (Z) goes forwards using default driver timings
-M569 P2 S{global.miloDriveDir[2]}
+M569 P4 S1
 
 ; Set drive mappings to relevant axes
-M584 X0 Y1 Z2
+M584 X0 Y1 Z4
 
 ; Configure microstepping, no interpolation.
 ; This is about as high as we can go without losing
@@ -25,10 +25,10 @@ M350 X32 Y32 Z32
 M92 X800 Y800 Z1600
 
 ; Set motor currents (mA)
-M906 X{global.miloDriveCurrent[0]} Y{global.miloDriveCurrent[1]} Z{global.miloDriveCurrent[2]}
+M906 X1200 Y1200 Z1200
 
 ; Set standstill current reduction to 10%
-M917 X{global.miloDriveStillCurrent[0]} Y{global.miloDriveStillCurrent[1]} Z{global.miloDriveStillCurrent[2]}
+M917 X10 Y10 Z10
 
 ; Enable motor idle current reduction after 30 seconds
 M84 S30

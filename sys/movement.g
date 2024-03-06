@@ -6,4 +6,4 @@
 ; K0 = Cartesian movement mode
 ; S5 = 5 segments per second, or 200ms per segment
 ; T0.5 = 0.5mm minimum segment length
-M669 K0 S5 T0.5
+M669 K0 S1 T1

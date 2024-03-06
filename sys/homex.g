@@ -8,14 +8,14 @@ G91
 G53 G0 Z{move.axes[2].max}
 
 ; Move quickly to X axis endstop and stop there (first pass)
-G53 G1 H1 X{-(move.axes[0].max - move.axes[0].min + global.miloHomingDist) } F{global.miloHomingSpeed[0]}
+G53 G1 H1 X{-(move.axes[0].max - move.axes[0].min + 5) } F{1800}
 
 ; Move away from X endstop
-G53 G1 H2 X{global.miloHomingDist}
+G53 G1 H2 X{5}
 
 ; Repeat X home at low speed. Do not move further than
-; 2 * global.miloHomingDist further than the expected endstop location.
-G53 G1 H1 X{-global.miloHomingDist*2} F{global.miloHomingSpeed[1]}
+; 2 * 5 further than the expected endstop location.
+G53 G1 H1 X{-5*2} F{180}
 
 ; Absolute positioning
 G90
