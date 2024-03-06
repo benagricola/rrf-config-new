@@ -16,10 +16,10 @@ M208 X335 Y208 Z0 S0
 ; Z homes upwards to zero.
 
 ; Endstop X=0: NC
-M574 X1 S1 P{global.miloPins[0]}
+M574 X1 S1 P"^xstop"
 
 ; Endstop Y=MAX: NC
-M574 Y2 S1 P{global.miloPins[1]}
+M574 Y2 S1 P"^ystop"
 
 ; Endstop Z=MAX: NC
-M574 Z2 S1 P{global.miloPins[2]}
+M574 Z2 S1 P"^zstop"
