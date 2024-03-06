@@ -1,20 +1,13 @@
-// Board Hardware configuration file for Fysetc Spider King 407 Version
-board = fysetc_spider_king407;
+//Config for Fly-CDYv3
+board = fly_cdyv3
 
-// NOTE: Generated configuration only supports one type of driver
-// at a time. If you're using a mix of driver types, you need to
-// edit this file manually for your particular driver setup.
+//WiFi pins
+8266wifi.espDataReadyPin = PE_10
+8266wifi.TfrReadyPin = PE_12
+8266wifi.espResetPin = PE_11
 
-// TMC Smart Drivers, 3 axis.
-stepper.SmartDrivers = 3
-stepper.TmcDiagPins = { F.6, F.7, F.8, F.11 }
-stepper.num5160Drivers = 2
-stepper.spiChannel = 3
-stepper.csDelay = 1
 
-// ESP32 Wifi Pins
-8266wifi.espDataReadyPin = G.2
-8266wifi.TfrReadyPin = G.1
-8266wifi.espResetPin = B.3
-8266wifi.serialRxTxPins = { A.10, A.9 }
-serial.aux.rxTxPins = { D.9, D.8 }
+//ESP32 RX/TX Settings
+8266wifi.serialRxTxPins = { PD_9, PD_8 }
+
+heat.tempSensePins = { PB_1, PA_3, PC_4, PD_14 }

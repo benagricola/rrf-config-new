@@ -4,9 +4,9 @@
 M98 P"general.g"
 
 ; Configure optional software e-stop,
-; make sure it is deactivated before
+; and make sure it is deactivated before
 ; proceeding.
-M98 P"estop.g"
+; M98 P"estop.g"
 
 ; Continue with configuration.
 M98 P"movement.g"
@@ -20,4 +20,4 @@ M98 P"spindle.g"
 M98 P"network.g"
 
 ; Load MOS
-M98 P"mos.g"
+; M98 P"mos.g"

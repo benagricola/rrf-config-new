@@ -17,6 +17,3 @@ G53 G1 H2 X{5} Y{-5}
 ; Repeat X and Y home at low speed. Do not move further than
 ; 2 * 5 further than the expected endstop locations.
 G53 G1 H1 X{-5*2} Y{5*2} F{180}
-
-; Absolute positioning
-G90
