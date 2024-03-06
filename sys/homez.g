@@ -14,14 +14,14 @@ if { state.currentTool != -1 }
     T-1 P0
 
 ; Raise Z towards endstop at high speed
-G53 G1 H1 Z{move.axes[2].max - move.axes[2].min + 5} F{1800}
+G53 G1 H1 Z{move.axes[2].max - move.axes[2].min + global.miloHomingDist} F{global.miloHomingSpeedFast}
 
 ; Move away from Z endstop
-G53 G1 H2 Z{-5}
+G53 G1 H2 Z{-global.miloHomingDist}
 
 ; Repeat Z home at low speed. Do not move further than
-; 2 * 5 above the expected endstop location.
-G53 G1 H1 Z{5*2} F{180}
+; 2 * global.miloHomingDist above the expected endstop location.
+G53 G1 H1 Z{global.miloHomingDist*2} F{global.miloHomingSpeedSlow}
 
 ; Absolute positioning
 G90

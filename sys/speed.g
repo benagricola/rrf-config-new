@@ -1,10 +1,10 @@
 ; speed.g - Configure speed limits, acceleration and jerk.
 
 ; Configure acceleration
-M201 X{600} Y{600} Z{400}
+M201 X{global.miloAccelerationX} Y{global.miloAccelerationY} Z{global.miloAccelerationZ}
 
 ; Configure maximum speeds
-M203 X{2000} Y{2000} Z{1200}
+M203 X{global.miloRapidSpeedX} Y{global.miloRapidSpeedY} Z{global.miloRapidSpeedZ}
 
 ; Configure jerk
-M566 X{400} Y{400} Z{200}
+M566 X{global.miloJerkX} Y{global.miloJerkY} Z{global.miloJerkZ}

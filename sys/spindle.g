@@ -4,4 +4,4 @@
 ; Minimum is achieved at 0% pulse width, Maximum is at 100% pulse width.
 
 ; TODO: We need to work out a good value for Q.
-M950 R0 C"he0+^fan1" L24000 Q100
+M950 R0 C{ global.miloPinSpindleSpeed ^ "+" ^ global.miloPinSpindleEnable} L24000 Q100

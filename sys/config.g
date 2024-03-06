@@ -1,5 +1,12 @@
 ; config.g: Load modular configuration for Milo CNC Mill
 
+; Load default variables
+M98 P"vars.g"
+
+; If user vars file exists, load it
+if { fileexists("0:/sys/user-vars.g") }
+    M98 P"user-vars.g"
+
 ; Configure general settings
 M98 P"general.g"
 

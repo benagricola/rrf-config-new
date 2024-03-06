@@ -4,7 +4,7 @@
 M453
 
 ; Set Machine Name
-M550 P"Milo 016"
+M550 P{global.miloMachineName}
 
 ; Disable heated bed
 M140 H-1
